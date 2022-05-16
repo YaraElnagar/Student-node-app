@@ -1,5 +1,11 @@
 [
-  { "sName": "yara", "sID": 17101960, "comment": "GM Major" },
-  { "sName": "Mazen", "sID": 1 },
-  { "sName": "Ayman", "sID": 11 }
+  {
+    "sName": "yara",
+    "sID": 17101960,
+    "sMarks": [50, 50, 50],
+    "totalMarks": 150,
+    "comment": "GM Major"
+  },
+  { "sName": "Ahmed", "sID": 11, "sMarks": [60, 50, 40], "totalMarks": 150 },
+  { "sName": "Mazen", "sID": 1, "sMarks": [20, 20, 20], "totalMarks": 60 }
 ]

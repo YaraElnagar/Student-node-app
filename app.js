@@ -5,8 +5,10 @@ const yargs = require ('yargs')     // required for command lines
 const student = require('./Students')
 
 // ADD
+// // node app.js add --sName="yara" --sID=17101960 --comment="GM Major"
 // node app.js add --sName="yara" --sID=17101960 --sMarks=50 50 50 --comment="GM Major"
-// node app.js add --sName="yara" --sID=17101960 --comment="GM Major"
+// node app.js add --sName="Ahmed" --sID=11 --sMarks=60 50 40
+// node app.js add --sName="Mazen" --sID=1 --sMarks=20 20 20
 yargs.command({
     command:'add',
     describe:'Adding student',
@@ -21,14 +23,14 @@ yargs.command({
             demandOption:true,
             describe:'student id in add command'
         },
-        // sMarks:{
-        //     type: 'array',
-        //     demandOption:true,
-        //     describe:'student mark in add command'
-        // },
-        // totalMarks:{
-        //     type:'number',
-        // },
+        sMarks:{
+            type:'array',
+            demandOption:true,
+            describe:'student mark in add command'
+        },
+        totalMarks:{
+            type:'number',
+        },
         comment:{
             type:'string',
             describe:'Comment in the add command'

@@ -2,26 +2,26 @@ const fs = require('fs')
 // const student = loadStudent()
 
 // Add
-const addStudent =(sName,sID,comment) =>{ //sMarks,totalMarks
+const addStudent =(sName,sID,comment,sMarks,totalMarks) =>{ //sMarks,totalMarks
 
     const student = loadStudent()
-    // var totalMarks = 0 
+    totalMarks = 0 
 
     const duplicateID = student.find((el)=>{
         return el.sID === sID
     })
-    console.log(duplicateID)
+    // console.log(duplicateID)
 
-    // sMarks.forEach((mark)=>{
-    //     return totalMarks += mark
-    // })
+    sMarks.forEach((mark)=>{
+        return totalMarks = totalMarks + mark
+    })
 
 if (!duplicateID){
     student.push({
         sName,
         sID,
-        // sMarks,
-        // totalMarks,
+        sMarks,
+        totalMarks,
         comment
     })
     saveStudent(student)
@@ -56,7 +56,7 @@ const readStudent =(sID) =>{
         return el.sID === sID
     })
     if(stud){
-        console.log(stud.sName,stud.sID,stud.comment) // mark total still missing ,stud.totalMarks
+        console.log(stud.sName,stud.sID,stud.comment,stud.totalMarks) // mark total still missing ,stud.totalMarks
     }
     else{
         console.log('No exsisting ID/Student')
